@@ -4,6 +4,14 @@ interface ProductProps {
   }
 }
 
+export async function GenerateMetadata({ params }: any) {
+  // console.log(params)
+
+  return {
+    title: `Produto ${params.id}`,
+  }
+}
+
 export default function Product({ params }: ProductProps) {
   return (
     <div>
