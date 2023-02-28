@@ -1,11 +1,17 @@
-import Link from 'next/link'
+// import { Repo } from '@/components/Repo'
+import { User } from '@/components/User'
 
-export default function Home() {
+export const revalidate = 30
+
+export default async function Home() {
   return (
     <div>
-      <h1>Hello World!</h1>
+      <h1>Home</h1>
 
-      <Link href="/dashboard">Dashboard</Link>
+      {/* @ts-expect-error Async Server Component */}
+      <User />
+
+      {/*    <Repo /> */}
     </div>
   )
 }
